@@ -1,0 +1,82 @@
+<Window x:Class="diode_Test_Beta.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diode_Test_Beta"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="500">
+    <Grid Background="#C0C0C0" RenderTransformOrigin="1.172,0.332" Margin="0,0,3,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"  Grid.ColumnSpan="2" Text=" Settings" HorizontalAlignment="Center" Foreground="#FFE8E8E8" FontSize="50" FontFamily="Stencil" RenderTransformOrigin="0.526,0.463" >
+
+
+        </TextBlock>
+
+        <Grid  Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0"  Grid.Column="0" Orientation="Horizontal">
+
+                <TextBlock Text="  Select COM Port:" HorizontalAlignment="Left"  FontSize="23" FontFamily="Stencil" Foreground="#FF4F3B3B" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="0"  Grid.Column="1" Orientation="Horizontal">
+                <ComboBox  Margin="80 0" Name ="COMComboBox" Grid.Column="0" Grid.Row="1" Height="40" Width="130" VerticalAlignment="Top"  HorizontalAlignment="Left" MaxDropDownHeight="200">
+
+                    <ComboBoxItem Content="COM1"></ComboBoxItem>
+                    <ComboBoxItem Content="COM2"></ComboBoxItem>
+                    <ComboBoxItem Content="COM3"></ComboBoxItem>
+                    <ComboBoxItem Content="COM4"></ComboBoxItem>
+                    <ComboBoxItem Content="COM5"></ComboBoxItem>
+                    <ComboBoxItem Content="COM6"></ComboBoxItem>
+                    <ComboBoxItem Content="COM7"></ComboBoxItem>
+                    <ComboBoxItem Content="COM8"></ComboBoxItem>
+                    <ComboBoxItem Content="COM9"></ComboBoxItem>
+                    <ComboBoxItem Content="COM10"></ComboBoxItem>
+                    <ComboBoxItem Content="COM11"></ComboBoxItem>
+                    <ComboBoxItem Content="COM12"></ComboBoxItem>
+                    <ComboBoxItem Content="COM13"></ComboBoxItem>
+                    <ComboBoxItem Content="COM14"></ComboBoxItem>
+                    <ComboBoxItem Content="COM15"></ComboBoxItem>
+                    <ComboBoxItem Content="COM16"></ComboBoxItem>
+
+                </ComboBox>
+
+
+            </StackPanel>
+            <StackPanel  Grid.Row="1" Grid.Column="0"  Orientation="Horizontal">
+
+                <TextBlock Text="  Select PR Board:" Foreground="#FF4F3B3B" FontSize="23"  FontFamily="Stencil" Margin="0,0,319.333,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+
+            </StackPanel>
+
+            <StackPanel  Grid.Row="1" Grid.Column="1"  Orientation="Horizontal">
+                <ComboBox x:Name="BoardsComboBox"  Height="40" Width="131"  MaxDropDownHeight="200" Margin="80,0" VerticalAlignment="Top"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Button Grid.Row = "2" Name="saveBtn" Content="Save Settings" Click="SaveBtn_Click"  Margin="146,30,124,47" RenderTransformOrigin="0.56,1.007" Foreground="#FF441426" FontFamily="Stencil" FontSize="15" Background="#FF2BB8A4" OpacityMask="#FFDA5050" />
+
+    </Grid>
+</Window>
