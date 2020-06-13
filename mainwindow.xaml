@@ -1,0 +1,167 @@
+<Window x:Class="diode_Test_Beta.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diode_Test_Beta"
+        mc:Ignorable="d"
+        Title="Window1" Height="575" Width="650"
+        
+        >
+    <Grid Background="#C0C0C0" RenderTransformOrigin="1.172,0.332" Margin="0,0,3,0">
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="382*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text=" Diode Test" HorizontalAlignment="Center" Foreground="#FFE8E8E8" FontSize="70" FontFamily="Stencil" RenderTransformOrigin="0.526,0.463" Margin="93,-1,94,1" Width="402" />
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="148*" />
+                <RowDefinition Height="91*" />
+                <RowDefinition Height="204*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="0">
+
+
+                <TextBlock Text="     Base Number:" Foreground="#FF4F3B3B" FontSize="25"  FontFamily="Stencil" HorizontalAlignment="Left"/>
+
+
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="1">
+                <TextBox x:Name="SerialNumber" TextChanged="SerialNumber_TextChanged" Width="200" Height="43"   HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.187,0.674" />
+            </StackPanel>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Grid.Column="0">
+                <Button x:Name ="SettingsButton" Margin="30,0,0,0"  Content="Settings" Click="SettingsButton_Click" Foreground="#FF441426" FontFamily="Stencil" FontSize="30" Background="#FF2BB8A4" OpacityMask="#FFDA5050" Width="177"  VerticalAlignment="Center" />
+            </StackPanel>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                <RowDefinition  />
+                <RowDefinition />
+                <RowDefinition />
+
+                </Grid.RowDefinitions>
+
+
+                <TextBlock x:Name ="IsOn" Text="Power ON" Grid.Row="0" FontSize="50" FontFamily="Stencil" HorizontalAlignment="Left"  Width="295" Foreground="#C0C0C0" VerticalAlignment="Center" >
+                    <TextBlock.Effect>
+                        <DropShadowEffect ShadowDepth="0"
+                    Color="#FF4F3B3B"
+                    Opacity="1"
+                    BlurRadius="2"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBlock Name ="Measage1" Grid.Row="1" Text="Caution High Voltage" FontSize="25"   FontFamily="Stencil" Foreground="#C0C0C0"/>
+                <TextBlock  Name ="Measage2" Grid.Row="2" Text="DO NOT OPEN COVER" FontSize="25"   FontFamily="Stencil" Foreground="#C0C0C0"/>
+
+
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+
+
+
+                <Grid  Grid.Row="0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <TextBlock  x:Name ="Test240" Text=""  FontSize="18" />
+                    </StackPanel>
+
+
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <ListView  Name="mylist" ItemsSource="{Binding Voltages}" Background="Transparent" FontSize="10" Foreground="Black" ScrollViewer.CanContentScroll ="True">
+
+                        </ListView>
+
+
+                    </StackPanel>
+
+
+                </Grid>
+
+                <Grid  Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <TextBlock  x:Name ="Test480" Text=""  FontSize="18" />
+                    </StackPanel>
+
+
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <ListView  Name="mylist2" ItemsSource="{Binding Voltages2}" Background="Transparent" FontSize="10" Foreground="Black" ScrollViewer.CanContentScroll ="True" >
+
+                        </ListView>
+
+
+                    </StackPanel>
+
+
+                </Grid>
+
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+        <TextBlock x:Name ="ID" Text=""  FontSize="15" FontFamily="Stencil" Margin="319,224,2,131" Grid.Row="1" RenderTransformOrigin="0.09,0.333"/>
+
+
+
+
+        <TextBlock  x:Name ="Pass" Text="PASS"  FontWeight="ExtraBold" Margin="310,269,-25,-15" Foreground= "#C0C0C0" FontSize="120" FontFamily="Stencil" HorizontalAlignment="Left" Width="304" RenderTransformOrigin="1.248,1.437" Grid.Row="1"  />
+        <TextBlock  x:Name ="Fail" Text="Fail" FontWeight="ExtraBold" Margin="309,269,58,-12" Foreground= "#C0C0C0"  FontSize="120" Grid.Row="1" FontFamily="Stencil" HorizontalAlignment="Center" RenderTransformOrigin="1.768,0.358" Width="272"/>
+
+
+
+    </Grid>
+
+</Window>
